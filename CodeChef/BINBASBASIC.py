@@ -6,7 +6,14 @@ for _ in range(t):
     for i in range(n // 2):
         if s[i] != s[n - i - 1]:
             c += 1
-    if k == c:
-        print("YES")
-    else:
+    if k < c:
         print("NO")
+    else:
+        k -= c
+        if n % 2 != 0:
+            print("YES")
+        else:
+            if k % 2 == 0:
+                print("YES")
+            else:
+                print("NO")
